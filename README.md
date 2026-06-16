@@ -14,7 +14,7 @@ The algorithm evaluates the state estimation performance across different noise 
 
 ### Mathematical Model
 
-The discrete-time state transitions are governed by the transition matrix $A$, where the prior probability is updated at each step $n$ as:
+The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as:
 
 $$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$
 

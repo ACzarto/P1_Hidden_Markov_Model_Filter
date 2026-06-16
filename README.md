@@ -18,7 +18,7 @@ The discrete-time state transitions are governed by the transition matrix $\Pi$,
 
 $$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$.
 
-The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption and the measurements $Y_n$,
+The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption and the measurements $Y_n$
 
 $$\beta_n = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n - \mathcal{A})^2}{2\sigma_W^2} \right)$$.
 

@@ -32,6 +32,6 @@ After computing the element-wise multiplication between the prediction and the o
 
 $$p_{n|n} = \frac{\beta_n \odot p_{n|n-1}}{\sum (\beta_n \odot p_{n|n-1})}$$
 
-Finally, the symbol estimation is performed using the Maximum A Posteriori (MAP) criterion:
+Finally, the symbol estimation is performed using the Maximum a Posteriori (MAP) criterion:
 
-$$\hat{S}_{n|n} = \arg\max_{S_k \in \mathcal{A}} (p_{n|n}[k])$$
+$$\hat{S}_{n|n} = \arg\max_{S_k \in \mathcal{A}} (p_{n|n})$$

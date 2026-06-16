@@ -14,18 +14,18 @@ The algorithm evaluates the state estimation performance across different noise 
 
 ### Mathematical Model
 
-The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as:
+The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as
 
-$$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$
+$$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$.
 
-The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption:
+The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption and the measurements $Y_n$,
 
-$$\beta_n = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n - \mathcal{A})^2}{2\sigma_W^2} \right)$$
+$$\beta_n = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n - \mathcal{A})^2}{2\sigma_W^2} \right)$$.
 
-After computing the element-wise multiplication between the prediction and the observation likelihood, the posterior probability vector $p_{n|n}$ is normalized:
+After computing the element-wise multiplication between the prediction and the observation likelihood, the posterior probability vector $p_{n|n}$ is normalized
 
 $$p_{n|n} = \frac{\beta_n \odot p_{n|n-1}}{\sum (\beta_n \odot p_{n|n-1})}$$
 
 Finally, the symbol estimation is performed using the Maximum A Posteriori (MAP) criterion:
 
-$$\hat{X}_n = \arg\max_{i} (p_{n|n})$$
+$$\hat{S}_{n|n} = \arg\max_{S_k \in \mathcal{A}} (p_{n|n}[k])$$

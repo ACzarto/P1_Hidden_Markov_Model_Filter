@@ -16,10 +16,7 @@ For this implementation, we considered that the symbol $X$, originally
 generated at the transmitter, is contaminated with additive white Gaussian 
 noise due to the channel, according to the model:
 
-\begin{equation}
-    Y = X + N
-\end{equation}
-
+$$ Y = X + N$$
 
 ### Mathematical Model
 

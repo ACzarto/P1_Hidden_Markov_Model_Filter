@@ -12,7 +12,7 @@ This filter assumes that we have full a priori knowledge of the system's statist
 
 The algorithm evaluates the state estimation performance across different noise levels by varying the noise standard deviation $\sigma_W$. 
 
-For this implementation, we considered that the symbol $X$, originally 
+For this implementation, we considered that the symbol $X \in A$, originally 
 generated at the transmitter, is contaminated with additive white Gaussian 
 noise due to the channel, according to the model:
 

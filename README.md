@@ -12,6 +12,15 @@ This filter assumes that we have full a priori knowledge of the system's statist
 
 The algorithm evaluates the state estimation performance across different noise levels by varying the noise standard deviation $\sigma_W$. 
 
+For this implementation, we considered that the symbol $X$, originally 
+generated at the transmitter, is contaminated with additive white Gaussian 
+noise due to the channel, according to the model:
+
+\begin{equation}
+    Y = X + N
+\end{equation}
+
+
 ### Mathematical Model
 
 The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as

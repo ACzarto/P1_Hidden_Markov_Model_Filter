@@ -16,11 +16,11 @@ The algorithm evaluates the state estimation performance across different noise 
 
 The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as
 
-$$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$.
+$$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$
 
 The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption and the measurements $Y_n$
 
-$$\beta_n = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n - \mathcal{A})^2}{2\sigma_W^2} \right)$$.
+$$\beta_n = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n - \mathcal{A})^2}{2\sigma_W^2} \right)$$
 
 After computing the element-wise multiplication between the prediction and the observation likelihood, the posterior probability vector $p_{n|n}$ is normalized
 

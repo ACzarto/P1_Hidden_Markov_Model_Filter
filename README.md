@@ -1,9 +1,9 @@
 # P1_Hidden_Markov_Model_Filter
 This project implements the Hidden Markov Model Filter (or Grid Filter) and compares the results of this Bayesian algorithm with the maximum likelihood approach (which does not consider a priori information about the source).
 
-In this algorithm, we have an information source that emits symbols from a discrete alphabet, where the possible outcomes are:
+In this algorithm, we have an information source that emits symbols from a discrete alphabet, where the possible outcomes are
 
-$$\mathcal{A} = \{S_1, S_2, S_3, \dots, S_q\}$$
+$$\mathcal{A} = \[S_1, S_2, S_3, \dots, S_q\]$$
 
 This filter assumes that we have full a priori knowledge of the system's statistics, specifically:
 1. The **Transition Probability Matrix** ($\Pi$), which defines how the hidden states evolve over time.

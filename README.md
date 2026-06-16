@@ -6,7 +6,7 @@ In this algorithm, we have an information source that emits symbols from a discr
 $$\mathcal{A} = \{S_1, S_2, S_3, \dots, S_q\}$$
 
 This filter assumes that we have full a priori knowledge of the system's statistics, specifically:
-1. The **Transition Probability Matrix** ($A$), which defines how the hidden states evolve over time.
+1. The **Transition Probability Matrix** ($\Pi$), which defines how the hidden states evolve over time.
 2. The **Initial State Probability Vector** ($p_0$), representing the prior belief of the starting state.
 3. The **Observation Model** ($\beta_n$), which maps the relationship between the hidden states and the noisy measurements.
 
@@ -16,7 +16,7 @@ The algorithm evaluates the state estimation performance across different noise 
 
 The discrete-time state transitions are governed by the transition matrix $A$, where the prior probability is updated at each step $n$ as:
 
-$$p_{n|n-1} = A \cdot p_{n-1|n-1}$$
+$$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$
 
 The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption:
 

@@ -18,6 +18,8 @@ noise due to the channel, according to the model:
 
 $$ Y = X + N$$
 
+The final goal of the algorithm is, based on the observable measurements $Y$, try to estimate the original state $X$.
+
 ### Mathematical Model
 
 The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as

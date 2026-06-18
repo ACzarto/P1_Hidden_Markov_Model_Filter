@@ -37,3 +37,6 @@ $$p_{n|n} = \frac{\beta_n \odot p_{n|n-1}}{\sum (\beta_n \odot p_{n|n-1})}$$
 Finally, the symbol estimation is performed using the Maximum a Posteriori (MAP) criterion:
 
 $$\hat{S}_{n|n} = \arg\max_{S_k \in \mathcal{A}} (p_{n|n})$$
+
+The following plot illustrates the Symbol Error Rate (SER) as a function of noise standard deviation, suggesting that the Bayesian algorithm outperforms the maximum likelihood estimation (MLE) method.
+

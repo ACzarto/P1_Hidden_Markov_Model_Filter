@@ -18,6 +18,8 @@ noise due to the channel, according to the model:
 
 $$ Y = X + N$$
 
+The final goal of the algorithm is, based on the observable measurements $Y$, try to estimate the original state $X$.
+
 ### Mathematical Model
 
 The discrete-time state transitions are governed by the transition matrix $\Pi$, where the prior probability is updated at each step $n$ as
@@ -26,7 +28,7 @@ $$p_{n|n-1} = \Pi \cdot p_{n-1|n-1}$$
 
 The update step incorporates the emission probabilities function $\beta_n$ (the observation model) under an Additive White Gaussian Noise (AWGN) assumption and the measurements $Y_n$
 
-$$\beta_n = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n - \mathcal{A})^2}{2\sigma_W^2} \right)$$
+$$\beta_n[i] = \frac{1}{\sqrt{2\pi\sigma_W^2}} \exp\left( -\frac{(Y_n[i] - \mathcal{A}[i])^2}{2\sigma_W^2} \right)$$
 
 After computing the element-wise multiplication between the prediction and the observation likelihood, the posterior probability vector $p_{n|n}$ is normalized
 
@@ -35,3 +37,6 @@ $$p_{n|n} = \frac{\beta_n \odot p_{n|n-1}}{\sum (\beta_n \odot p_{n|n-1})}$$
 Finally, the symbol estimation is performed using the Maximum a Posteriori (MAP) criterion:
 
 $$\hat{S}_{n|n} = \arg\max_{S_k \in \mathcal{A}} (p_{n|n})$$
+
+The following plot illustrates the Symbol Error Rate (SER) as a function of noise standard deviation, suggesting that the Bayesian algorithm outperforms the maximum likelihood estimation (MLE) method.
+
